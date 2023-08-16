@@ -1,0 +1,9 @@
+APP_BUILD_SCRIPT := Android.mk   
+APP_BUILD_SCRIPT += ../../CryptoLibs/jni-Argon2/Android.mk
+#APP_BUILD_SCRIPT += ../../CryptoLibs/jni-Blake3/Android.mk
+APP_BUILD_SCRIPT += ../../CryptoLibs/jni-scrypt/Android.mk
+APP_ABI := armeabi-v7a arm64-v8a x86_64
+APP_STL := c++_shared
+APP_CPPFLAGS += -fexceptions
+APP_CFLAGS += -O3
+LOCAL_CFLAGS := -w

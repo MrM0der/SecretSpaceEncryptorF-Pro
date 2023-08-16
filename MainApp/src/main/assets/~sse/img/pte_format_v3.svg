@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<svg width="500" height="310" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Paranoia Text Encryption - Format Specifications</title>
+  <line fill="none" id="svg_34" stroke="#999999" stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" x1="14.647727" x2="14.295736" y1="183.521062" y2="253.260065"/>
+  <line fill="none" id="svg_33" stroke="#999999" stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" x1="304.351979" x2="303.999988" y1="182.77118" y2="252.510183"/>
+  <line fill="none" id="svg_1" stroke="#999999" stroke-dasharray="5,3" stroke-miterlimit="10" x1="304" x2="485" y1="141" y2="110"/>
+  <line fill="none" id="svg_4" stroke="#999999" stroke-dasharray="5,3" stroke-miterlimit="10" x1="237" x2="267" y1="141" y2="110"/>
+  <line fill="none" id="svg_5" stroke="#999999" stroke-dasharray="5,3" stroke-miterlimit="10" x1="69" x2="87" y1="57" y2="141"/>
+  <line fill="none" id="svg_6" stroke="#999999" stroke-dasharray="5,3" stroke-miterlimit="10" x1="255" x2="237" y1="57" y2="141"/>
+  <rect fill="#dcdcdc" height="42" id="svg_7" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="186" x="69" y="15"/>
+  <text fill="black" font-family="Sans-serif" font-size="18" font-weight="bold" id="svg_8" transform="matrix(1, 0, 0, 1, 87.813, 43.0278)" x="-1.679672" y="-1.027802">Plain Text (UTF-8)</text>
+  <polyline id="svg_9" points="162,119.5510025024414 178.30299377441406,102.05000305175781 169.8260040283203,102.05000305175781 169.8260040283203,80.76499938964844 154.1739959716797,80.76499938964844 154.1739959716797,102.05000305175781 145.69700622558594,102.05000305175781 162,119.5510025024414 "/>
+  <rect fill="#FFFFFF" height="42" id="svg_10" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="150" x="87" y="141"/>
+  <rect fill="#FFFFFF" height="42" id="svg_11" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="72" x="15" y="141"/>
+  <rect fill="#FFFFFF" height="42" id="svg_12" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="67" x="237" y="141"/>
+  <text fill="black" font-family="Sans-serif" font-size="18" font-weight="bold" id="svg_13" transform="matrix(1, 0, 0, 1, 96.5059, 167.82)" x="-0.639229" y="0.179993">Encrypted Data</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" font-weight="normal" id="svg_14" transform="matrix(1, 0, 0, 1, 117.292, 71.7979)" x="-1.291999" y="0">compression (*A)</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_15" transform="matrix(1, 0, 0, 1, 123.966, 132.27)" x="-1.166003" y="0">encryption (*B)</text>
+  <text fill="black" font-family="Sans-serif" font-size="17" font-weight="bold" id="svg_16" transform="matrix(0.915, 0, 0, 1, 21.1567, 167.82)" x="-0.363216" y="-0.211951">Salt (*C)</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" font-weight="bold" id="svg_17" transform="matrix(0.915, 0, 0, 1, 248.258, 159.696)" x="2.145514" y="0">Config</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" font-weight="bold" id="svg_18" transform="matrix(0.915, 0, 0, 1, 260.185, 176.989)" x="2.326422" y="0">1B</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_19" transform="matrix(1, 0, 0, 1, 126.775, 198.562)" x="-2.387009" y="0">BASE64 (*D)</text>
+  <polyline id="svg_20" points="159.18799114227295,245.08999633789062 175.490984916687,227.58900451660156 167.01399517059326,227.58900451660156 167.01399517059326,206.3040008544922 151.36198711395264,206.3040008544922 151.36198711395264,227.58900451660156 142.8849973678589,227.58900451660156 159.18799114227295,245.08999633789062 "/>
+  <rect fill="#dcdcdc" height="42" id="svg_21" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="288.853023" x="14.761477" y="253"/>
+  <text fill="black" font-family="Sans-serif" font-size="18" font-weight="bold" id="svg_22" transform="matrix(1, 0, 0, 1, 115.045, 279.82)" x="-4.007009" y="0.179993">Result Text</text>
+  <rect fill="#FFFFFF" height="34" id="svg_23" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="67" x="267" y="76"/>
+  <rect fill="#FFFFFF" height="34" id="svg_24" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="67" x="334" y="76"/>
+  <rect fill="#FFFFFF" height="34" id="svg_25" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="84" x="401" y="76"/>
+  <text fill="black" font-family="Sans-serif" font-size="14" id="svg_26" transform="matrix(0.7139, 0, 0, 1, 270.888, 90.0898)" x="0.23493" y="0">Compression</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" id="svg_27" transform="matrix(1, 0, 0, 1, 344.652, 90.0898)">Version</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" id="svg_28" transform="matrix(0.8049, 0, 0, 1, 408.441, 90.0898)" x="-0.617206" y="0">Algorithm (*E)</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" id="svg_29" transform="matrix(1, 0, 0, 1, 294.483, 105.259)" x="-1.766335" y="0">1b</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" id="svg_30" transform="matrix(1, 0, 0, 1, 360.214, 105.259)">3b</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" id="svg_31" transform="matrix(1, 0, 0, 1, 431.484, 105.259)" x="3.732658" y="0">4b</text>
+ </g>
+
+</svg>

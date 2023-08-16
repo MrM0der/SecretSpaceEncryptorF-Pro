@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+</head>
+<body>
+	<b>SAF Mode</b><br/>
+	<span style="font-size: 80%;">This directory is read-only in direct access mode. To gain full access to this folder, try using <b>SAF</b> mode.</span><br/>
+	<br/>
+	<h2>Where?</h2>
+	<img src="../../img/saf_button.jpg" style="width:300px; max-width: 100%;"/><br/>
+	<span id="SAF01">
+		<br/>
+		<ul><li>button <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_a.png"/> or <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_b.png"/></li></ul>
+	</span>
+	<br/>
+	<span style="font-size: 80%;" id="DEST01">
+		Or, it can be used for output operations only (if custom destination folders are activated in the application settings - <i><b>Settings: File Encryptor → Encrypted/Decrypted Files Destination</b></i>).<br/>
+		If you set the destination(s) to <b>"Ask"</b>, the following dialog will be displayed for all encryption/decryption tasks:<br/><br/>
+	</span>
+	<span style="font-size: 80%;" id="DEST02">
+		Or, after pressing the "Encrypt / Decrypt" button, use the following option:<br/><br/>
+	</span>
+	<img src="../../img/saf_dest.png" style="width:300px; max-width: 100%;"/><br/>
+	<br/><br/>
+	<h2>Notes & Limitations</h2>
+	<span style="font-size: 80%;">
+		<ul>
+			<li>In general, <span class="strokeYellow">external SD cards are usually much less reliable</span> (especially some combinations of devices/SD cards) than an internal memory.</li>
+			<li>SAF API provides much lower performance than the standard direct file access mode (<span class="strokeYellow">especially with dirs that contain a lot of files/subdirs</span>).</li>
+			<li>Home/Custom directories cannot be set in SAF; however, the last-picked SAF URI is automatically saved: <b>Home Button → Go to Last Picked SAF Dir</b>.</li>
+			<li>The wipe feature does not work. If option “Wipe after Encryption” is checked in the app settings, file(s) will be deleted only.</li>
+		</ul>
+	</span>
+	<script language="JavaScript">
+		try {
+			if(getValue("API_VERSION") > 29) {
+				document.getElementById("SAF01").style.display = 'none';
+			}
+			if(getValue("FILE_DESTINATIONS") == 22) {
+				document.getElementById("DEST01").style.display = 'none';
+			}
+			else {
+				document.getElementById("DEST02").style.display = 'none';
+			}
+			
+		}catch(err){} 
+	</script>
+
+</body>
+ 

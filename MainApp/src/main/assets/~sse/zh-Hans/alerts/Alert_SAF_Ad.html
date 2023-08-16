@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hans">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+</head>
+<body>
+	<b>SAF模式</b><br/>
+	<span style="font-size: 80%;">在直接访问模式下，该目录为只读。 要完全访问此文件夹，请尝试使用<b>SAF</b>模式。</span><br/>
+	<br/>
+	<h2>哪里？</h2>
+	<img src="../../img/saf_button.jpg" style="width:300px; max-width: 100%;"/><br/>
+	<span id="SAF01">
+		<br/>
+		<ul><li><img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_a.png"/> 要么 <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_b.png"/></li></ul>
+	</span>
+	<br/>
+	<h2>注意事项和限制</h2>
+	<span style="font-size: 80%;">
+		<ul>
+			<li><span class="strokeYellow">通常，外部SD卡的可靠性（尤其是设备/ SD卡的某些组合）通常不如内部存储器可靠。</span></li>
+			<li>在 SAF 模式下不能设置主目录/自定义目录，不过最近一次选定的 SAF URI 可以自动保存：&ldquo;<B>主目录（Home）按钮</B>&rdquo; → &ldquo;<B>转到最近选择的 SAF 目录（Go to Last Picked SAF Dir）</B>&rdquo;。 </li>
+			<li>无法使用&ldquo;擦除&rdquo;功能。如果在应用设置中选中了&ldquo;加密后擦除（Wipe after Encryption）&rdquo;选项，文件将只可被删除。</li>
+			<li>相比标准的直接文件访问模式，在 SAF 模式下执行文件操作的性能略低（尤其是当目录中包含大量文件/子目录时）。</li>
+		</ul>
+	</span>
+	<script language="JavaScript">
+		try {
+			if(getValue("API_VERSION") > 29) {
+				document.getElementById("SAF01").style.display = 'none';
+			}			
+		}catch(err){} 
+	</script>
+
+</body>
+ 

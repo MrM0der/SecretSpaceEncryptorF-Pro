@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<svg width="395" height="410" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>S.S.E. File Encryptor - Format Specifications</title>
+  <line fill="none" id="svg_29" stroke="#999999" stroke-dasharray="5,5" stroke-miterlimit="10" x1="324.500035" x2="324.500035" y1="53.005276" y2="137.005276"/>
+  <line fill="none" id="svg_2" stroke="#999999" stroke-dasharray="5,5" stroke-miterlimit="10" x1="94" x2="124" y1="54" y2="137"/>
+  <line fill="none" id="svg_3" stroke="#999999" stroke-dasharray="5,5" stroke-miterlimit="10" x1="324.5" x2="324.5" y1="176" y2="260"/>
+  <line fill="none" id="svg_4" stroke="#999999" stroke-dasharray="5,5" stroke-miterlimit="10" x1="35" x2="125" y1="176" y2="260"/>
+  <line fill="none" id="svg_5" stroke="#999999" stroke-dasharray="5,3" stroke-miterlimit="10" x1="14.5" x2="14.5" y1="299" y2="356"/>
+  <line fill="none" id="svg_6" stroke="#999999" stroke-dasharray="5,3" stroke-miterlimit="10" x1="70" x2="358" y1="299.5" y2="355.3"/>
+  <rect fill="#dcdcdc" height="39" id="svg_7" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="198.9231" x="125" y="260"/>
+  <rect fill="#dcdcdc" height="39" id="svg_8" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="55" x="15" y="260"/>
+  <text fill="black" font-family="Sans-serif" font-size="18" font-weight="bold" id="svg_9" transform="matrix(1, 0, 0, 1, 156.506, 279.809)" x="1.82222" y="5.69101">Encrypted Data</text>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_10" transform="matrix(0.763192, 0, 0, 0.9, 20.8486, 278.206)" x="0.68512" y="-3">Header</text>
+  <rect fill="#FFFFFF" height="39" id="svg_11" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="82" x="15" y="356"/>
+  <text fill="black" font-family="Sans-serif" font-size="12" font-weight="normal" id="svg_12" transform="matrix(1, 0, 0, 1, 18.3711, 361.326)" x="1.628901" y="10">Header String</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_13" transform="matrix(1, 0, 0, 1, 40.2808, 377.056)" x="-8.280799" y="10">“SSEFE”</text>
+  <polyline id="svg_14" points="206.5830078125,127.0938491821289 223.17001342773438,108.46784973144531 214.54600524902344,108.46685028076172 214.54800415039062,85.81184387207031 198.62701416015625,85.81184387207031 198.625,108.46685028076172 190,108.46585083007812 206.5830078125,127.0938491821289 "/>
+  <rect fill="#FFFFFF" height="39" id="svg_15" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="79" x="97" y="356"/>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_16" transform="matrix(1, 0, 0, 1, 105.473, 361.325)" x="-0.573001" y="10">Version (*E)</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_17" transform="matrix(1, 0, 0, 1, 129.191, 377.056)" x="-0.290994" y="10">1B</text>
+  <rect fill="#FFFFFF" height="39" id="svg_18" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="91" x="176" y="356"/>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_19" transform="matrix(1, 0, 0, 1, 184.686, 361.326)" x="0.413995" y="10">Algorithm (*F)</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_20" transform="matrix(1, 0, 0, 1, 213.382, 377.056)" x="0.517997" y="10">1B</text>
+  <rect fill="#FFFFFF" height="39" id="svg_21" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="92" x="267" y="356"/>
+  <text fill="black" font-family="Sans-serif" font-size="12" font-weight="normal" id="svg_22" transform="matrix(1, 0, 0, 1, 270.394, 361.324)" x="3.805989" y="10">KDF Conf (*G)</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_23" transform="matrix(1, 0, 0, 1, 280.797, 377.056)" x="24.603003" y="10">1B</text>
+  <rect fill="#FFFFFF" height="39" id="svg_24" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="89" x="35" y="137"/>
+  <text fill="black" font-family="Sans-serif" font-size="11" id="svg_25" transform="matrix(0.8849, 0, 0, 1, 39.9697, 152.044)">Random Data (*C)</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_26" transform="matrix(1, 0, 0, 1, 70.1123, 167.505)">32B</text>
+  <rect fill="#dcdcdc" height="39" id="svg_27" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="230" x="94.000002" y="15"/>
+  <text fill="black" font-family="Sans-serif" font-size="18" font-weight="bold" id="svg_28" transform="matrix(1, 0, 0, 1, 158.792, 41.5952)" x="30.599659" y="-1.0952">Data</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_30" transform="matrix(1, 0, 0, 1, 269.112, 167.505)" x="-55.911999" y="-6.605005">32B</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_31" transform="matrix(1, 0, 0, 1, 135.686, 68.5156)" x="28.49822" y="2.499844">compression (A*)</text>
+  <rect fill="#FFFFFF" height="39" id="svg_32" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="200" x="124" y="137"/>
+  <text fill="black" font-family="Sans-serif" font-size="18" font-weight="bold" id="svg_33" transform="matrix(1, 0, 0, 1, 131.506, 161.034)" x="32.26067" y="1.466003">Archived Data</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_34" transform="matrix(1, 0, 0, 1, 140.686, 192.706)" x="28.248346" y="-0.12498">encryption (B*)</text>
+  <polyline id="svg_35" points="206.8313570022583,247.1570172905922 223.41836261749268,228.53102546930313 214.79435443878174,228.530018389225 214.79635334014893,205.87501960992813 198.87536334991455,205.87501960992813 198.8733491897583,228.530018389225 190.2483491897583,228.52902656793594 206.8313570022583,247.1570172905922 "/>
+  <rect fill="#dcdcdc" height="39" id="svg_37" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="55" x="70" y="260"/>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_38" transform="matrix(1, 0, 0, 1, 129.191, 377.056)" x="-94.290991" y="-85">8B</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_41" transform="matrix(1, 0, 0, 1, 129.191, 377.056)" x="-42.490995" y="-85">32B</text>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_42" transform="matrix(0.862536, 0, 0, 0.9, 16.295, 278.206)" x="79.285206" y="-3">Salt</text>
+  <rect fill="#dcdcdc" height="39" id="svg_36" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="58" x="324.109181" y="260.000025"/>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_39" transform="matrix(0.862536, 0, 0, 0.9, 16.295, 278.206)" x="362.377704" y="-3">MAC</text>
+  <text fill="black" font-family="Sans-serif" font-size="12" id="svg_40" transform="matrix(1, 0, 0, 1, 129.191, 377.056)" x="214.991798" y="-85">32B</text>
+  <text fill="black" font-family="Sans-serif" font-size="11" id="svg_43" transform="matrix(0.8849, 0, 0, 1, 39.9697, 152.044)" x="363.306313" y="121.496122">(*D)</text>
+  <polyline fill="none" fill-opacity="null" id="svg_1" points="222.4875864982605,130.2427316904068 222.73757255077362,130.2427316904068 " stroke="null" stroke-linecap="round" stroke-opacity="null" stroke-width="null"/>
+ </g>
+
+</svg>

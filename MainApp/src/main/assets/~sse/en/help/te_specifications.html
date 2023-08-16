@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<title>Paranoia Text Encryption - Format Specifications</title>
+    <script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+</head>
+<body>
+	<h1 id="anchor_main" class="textToCenter smallPad">
+		Text Encryptor
+		<div class="smallerFont">(format specifications)</div>
+	</h1>
+	<img src="../../img/pte_format_v3.svg" style="width:650px; max-width: 100%;" alt="Text Encryption Format"/>
+	<br/><br/>
+	<b>*A - Compression: </b>LZMA algorithm; It's used only if not disabled and if the compressed data size is smaller than the uncompressed one;<br/>
+	<b>*B - Encryption: </b>Chosen algorithm in EAX mode; Tag size - chosen blockcipher block size or 256bit max;<br/>
+	<b>*C - Salt: </b>Chosen blockcipher block size or 256bit max;<br/>
+	<b>*D - BASE64: </b>BASE64 encoding without padding; "+" symbol is replaced by ")", "/" by "]"; "!" symbol is attached as the last character; Alternative encodings: Base32 (RFC 4648), Numbers Only (0-9);<br/>
+	<b>*E - Algorithm Codes: </b><br/>
+	<div style="margin-left: 1.35em;">
+		• 0 = AES (256 bit)<br/> 
+		• 1 = RC6 (256 bit)<br/>
+		• 2 = Serpent (256 bit) : <small>(Bouncy Castle "Tnepres" implementation)</small><br/>
+		• 3 = Blowfish (256 bit)<br/> 
+		• 4 = Twofish (256 bit)<br/>
+		• 5 = GOST28147 (256 bit)<br/>
+		• 6 = Blowfish (448 bit)<br/>
+		• 7 = Threefish (1024 bit) : <small>(for PRO version)</small><br/>
+		• 8 = SHACAL-2 (512bit) : <small>(for PRO version)</small><br/>
+		• 9 = Paranoia C4 (2048 bit) : <small>(for PRO version - cascade of Threefish–Serpent–AES–SHACAL2)</small>
+	</div><hr/>
+	<b>Notes:</b><br/>
+	• For cascaded algorithms - the last layer is processed in EAX mode, the others in CTR.<br/>
+	<br/>
+	<h2 id="anchor_kdf">Key Derivation Function</h2>
+	• STEP 1: <code style="font-size: 140%;">HKDF(password)</code><br/>
+	(SHA3-512 based HKDF; Stored in device's RAM during session; 2048 bits;)<br/>
+	• STEP 2: <code style="font-size: 140%;">Argon2id(STEP 1, salt)</code><br/>
+	(New run (new salt) for every single encryption operation; 2048 bits;)<br/>
+	• STEP 3: <code style="font-size: 140%;">2 x HKDF(STEP 2)</code><br/>
+	(SHA3-512 based HKDF; For encryption key and nonce;)<br/>
+	<hr/>
+	<b>Notes:</b><br/>
+	• For cascaded algorithms, a longer key and nonce is generated in step 3, which are then split to get unique key and nonce for each algorithm.<br/>
+	• Characters that are not from ASCII range 32-126 are converted to unicode code point numbers (for example: password "contraseña" equals "contrase241a").<br/>
+	<hr/>
+	<b>Argon2id Parameters:</b><br/>
+	t = 3<br/>
+	m = 30720 kB<br/>
+	h = 4<br/>
+	<br/>
+	<h2>Steganography (F5 - JPEG)</h2>
+	<img src="../../img/pte_steganogram_v3.svg" style="width:600px; max-width: 100%;" alt="Text Encryption Format"/>
+	<br/><br/>
+	<b>*A - Steganography: </b>F5 algorithm; Pseudorandom generator based on BLAKE2 hash function;<br/>
+	<b>*B - Encryption: </b>Exactly the same process and format as <a href="#anchor_main">above</a> - only BASE64 encoding is excluded;<br/>
+	<b>*C - Steganographic Key: </b>Pseudorandom generator seed;<br/>
+	<b>• Argon2 parameters: </b>Exactly the same process and parameters as <a href="#anchor_kdf">KDF above</a>;<br/>
+	<b>• scrypt parameters: </b>N = 2048, r = 8, p = 5;<br/>
+	<br/>
+	<h2>Implementations</h2>
+	<ul>
+		<li><a href="https://paranoiaworks.mobi/sse/" target="_blank">Secret Space Encryptor for Android</a></li>
+		<li><a href="https://paranoiaworks.mobi/pte/" target="_blank">Paranoia Text Encryption for iOS</a></li>
+		<li><a href="https://paranoiaworks.mobi/ptepc/" target="_blank">Paranoia Text Encryption for PC</a></li>
+		<li><a href="https://pteo.paranoiaworks.mobi/" target="_blank">Paranoia Text Encryption Online (PTEO)</a></li>
+		<li><a href="https://linkenc.net" target="_blank">Link Encryptor Online (based on PTEO)</a></li>
+	</ul>
+	
+	<br/>
+
+</body>
+</html>

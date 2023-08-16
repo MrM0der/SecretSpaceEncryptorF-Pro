@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="APP_VERSION_NAME" translatable="false">3.1</string>
+    <string name="APP_YEAR" translatable="false">2023</string>
+    
+	<!-- Settings -->
+	<string-array name="settings_categories" translatable="false"> <!-- (ID|Sequence) -->
+		<item>SC_PasswordVault||1</item>
+		<item>SC_MessageEnc||2</item>
+		<item>SC_FileEnc||3</item>
+		<item>SC_Common||4</item>
+    </string-array>	
+    <string-array name="settings_items" translatable="false"> <!-- (CatID|ItemID|Sequence|Type|ValueName|DefaultValue) -->
+		
+		<!-- PasswordVault -->
+		<item>SC_PasswordVault||SI_Algorithm||1||Selector||AES (256 bit)::0|RC6 (256 bit)::1|Serpent (256 bit)::2|Twofish (256 bit)::4|Blowfish (448 bit)::6|~Threefish (1024 bit)::7|~SHACAL-2 (512 bit)::8|~Paranoia C4 (2048 bit)::9||0</item>
+		<item>SC_PasswordVault||SI_AutoBackup||2||Text:PathOrNull||---||///</item>
+		<item>SC_PasswordVault||SI_PasswordListFontSize||3||Selector||70::0|85::1|100::2|115::3|130::4||2</item>
+		<item>SC_PasswordVault||SI_DisableAutoLinks||4||CheckBox||---||false</item>
+		<item>SC_PasswordVault||SI_LockScreenTime||5||Selector||SIV_Disabled::-1|SIV_Immediately::0|1 min::1|2 min::2|3 min::3|5 min::5|10 min::10|15 min::15|20 min::20|30 min::30|60 min::60||-1</item>
+		
+		<!-- MessageEnc -->
+		<item>SC_MessageEnc||SI_Algorithm||1||Selector||AES (256 bit)::0|RC6 (256 bit)::1|Serpent (256 bit)::2|Twofish (256 bit)::4|Blowfish (448 bit)::6|~Threefish (1024 bit)::7|~SHACAL-2 (512 bit)::8|~Paranoia C4 (2048 bit)::9||6</item>
+		<item>SC_MessageEnc||SI_FinalEncoding||2||Selector||SIV_Base64SSE::0|SIV_Base32EAM::1|SIV_Base10Num::2||0</item>
+		<item>SC_MessageEnc||SI_Compression||3||Selector||SIV_Disabled::0|LZMA::1||1</item>
+		<item>SC_MessageEnc||SI_AddWhiteSpace||4||Selector||SIV_Disabled::0|1::1|2::2|3::3|4::4|5::5|6::6|7::7|8::8|9::9|10::10||0</item>
+		<item>SC_MessageEnc||SI_FontSizeME||5||Selector||60::0|80::1|100::2|130::3|160::4||2</item>
+		<item>SC_MessageEnc||SI_HideInfoMessage||6||CheckBox||---||false</item>
+		<item>SC_MessageEnc||SI_LockScreenTimeTE||7||Selector||SIV_Disabled::-1|SIV_Immediately::0|1 min::1|2 min::2|3 min::3|5 min::5|10 min::10|15 min::15|20 min::20|30 min::30|60 min::60||-1</item>
+
+		<!-- FileEnc -->
+		<item>SC_FileEnc||SI_Algorithm||1||Selector||AES (256 bit)::0|RC6 (256 bit)::1|Serpent (256 bit)::2|Twofish (256 bit)::4|Blowfish (448 bit)::6|~Threefish (1024 bit)::7|~SHACAL-2 (512 bit)::8|~Paranoia C4 (2048 bit)::9||0</item>
+		<item>SC_FileEnc||SI_EncFileDestination||2||Selector||SIV_SameAsSource::0|SIV_CustomLocation::1|SIV_LocationAsk::2||2</item>
+		<item>SC_FileEnc||SI_DecFileDestination||3||Selector||SIV_SameAsSource::0|SIV_CustomLocation::1|SIV_LocationAsk::2||2</item>
+		<item>SC_FileEnc||SI_WipeSourceFiles||4||CheckBox||---||false</item>
+		<item>SC_FileEnc||SI_DeleteAfterDecryption||5||CheckBox||---||false</item>
+		<item>SC_FileEnc||SI_EncFileExistWarning||6||CheckBox||---||true</item>
+		<item>SC_FileEnc||SI_ThumbnailSize||7||Selector||SIV_DisableThumbnails::0|100::1|125::2|150::3||1</item>
+		<item>SC_FileEnc||SI_LockScreenTimeFE||8||Selector||SIV_Disabled::-1|SIV_Immediately::0|1 min::1|2 min::2|3 min::3|5 min::5|10 min::10|15 min::15|20 min::20|30 min::30|60 min::60||-1</item>
+		
+		<!-- Common parameters -->
+		<item>SC_Common||SI_ImportExportPath||1||Text:Path||---||???</item>
+		<item>SC_Common||SI_AppStartProtection||2||CheckBoxCustom:SettingsAppStartProtectionDialog||---||false</item>
+		<item>SC_Common||SI_PreventScreenshots||3||CheckBox||---||false!!apiversion|19</item>
+		<item>SC_Common||SI_AllowUnicodePasswords||4||CheckBox||---||false</item>
+		<item>SC_Common||SI_AskIfReturnToMainPage||5||CheckBox||---||true</item>
+		<item>SC_Common||SI_AllowExternalAutofill||6||CheckBox||---||false!!apiversion|25</item>
+		<item>SC_Common||SI_RunClipboardCleanerOnExit||7||CheckBox||---||false</item>
+		<item>SC_Common||SI_SpecialCommands||8||CheckBox||---||false</item>
+		
+    </string-array>   
+	<string-array name="settings_items_pro" translatable="false"> <!-- (CatID|ItemID|Sequence|Type|ValueName|DefaultValue) -->
+		
+		<!-- PasswordVault -->
+		<item>SC_PasswordVault||SI_Algorithm||1||Selector||AES (256 bit)::0|RC6 (256 bit)::1|Serpent (256 bit)::2|Twofish (256 bit)::4|Blowfish (448 bit)::6|Threefish (1024 bit)::7|SHACAL-2 (512 bit)::8|Paranoia C4 (2048 bit)::9||0</item>
+		<item>SC_PasswordVault||SI_AutoBackup||2||Text:PathOrNull||---||///</item>
+		<item>SC_PasswordVault||SI_PasswordListFontSize||3||Selector||70::0|85::1|100::2|115::3|130::4||2</item>
+		<item>SC_PasswordVault||SI_DisableAutoLinks||4||CheckBox||---||false</item>
+		<item>SC_PasswordVault||SI_LockScreenTime||5||Selector||SIV_Disabled::-1|SIV_Immediately::0|1 min::1|2 min::2|3 min::3|5 min::5|10 min::10|15 min::15|20 min::20|30 min::30|60 min::60||-1</item>
+		
+		<!-- MessageEnc -->
+		<item>SC_MessageEnc||SI_Algorithm||1||Selector||AES (256 bit)::0|RC6 (256 bit)::1|Serpent (256 bit)::2|Twofish (256 bit)::4|Blowfish (448 bit)::6|Threefish (1024 bit)::7|SHACAL-2 (512 bit)::8|Paranoia C4 (2048 bit)::9||6</item>
+		<item>SC_MessageEnc||SI_FinalEncoding||2||Selector||SIV_Base64SSE::0|SIV_Base32EAM::1|SIV_Base10Num::2||0</item>
+		<item>SC_MessageEnc||SI_Compression||3||Selector||SIV_Disabled::0|LZMA::1||1</item>
+		<item>SC_MessageEnc||SI_AddWhiteSpace||4||Selector||SIV_Disabled::0|1::1|2::2|3::3|4::4|5::5|6::6|7::7|8::8|9::9|10::10||0</item>
+		<item>SC_MessageEnc||SI_FontSizeME||5||Selector||60::0|80::1|100::2|130::3|160::4||2</item>
+		<item>SC_MessageEnc||SI_HideInfoMessage||6||CheckBox||---||false</item>
+		<item>SC_MessageEnc||SI_LockScreenTimeTE||7||Selector||SIV_Disabled::-1|SIV_Immediately::0|1 min::1|2 min::2|3 min::3|5 min::5|10 min::10|15 min::15|20 min::20|30 min::30|60 min::60||-1</item>
+		
+		<!-- FileEnc -->
+		<item>SC_FileEnc||SI_Algorithm||1||Selector||AES (256 bit)::0|RC6 (256 bit)::1|Serpent (256 bit)::2|Twofish (256 bit)::4|Blowfish (448 bit)::6|Threefish (1024 bit)::7|SHACAL-2 (512 bit)::8|Paranoia C4 (2048 bit)::9||0</item>
+		<item>SC_FileEnc||SI_MultiSelection||2||CheckBox||---||false</item>
+		<item>SC_FileEnc||SI_EncFileDestination||3||Selector||SIV_SameAsSource::0|SIV_CustomLocation::1|SIV_LocationAsk::2||2</item>
+		<item>SC_FileEnc||SI_DecFileDestination||4||Selector||SIV_SameAsSource::0|SIV_CustomLocation::1|SIV_LocationAsk::2||2</item>
+		<item>SC_FileEnc||SI_WipeSourceFiles||5||CheckBox||---||false</item>
+		<item>SC_FileEnc||SI_DeleteAfterDecryption||6||CheckBox||---||false</item>
+		<item>SC_FileEnc||SI_EncFileExistWarning||7||CheckBox||---||true</item>
+		<item>SC_FileEnc||SI_ThumbnailSize||8||Selector||SIV_DisableThumbnails::0|100::1|125::2|150::3||1</item>
+		<item>SC_FileEnc||SI_LockScreenTimeFE||9||Selector||SIV_Disabled::-1|SIV_Immediately::0|1 min::1|2 min::2|3 min::3|5 min::5|10 min::10|15 min::15|20 min::20|30 min::30|60 min::60||-1</item>
+		
+		<!-- Common parameters -->
+		<item>SC_Common||SI_ImportExportPath||1||Text:Path||---||???</item>
+		<item>SC_Common||SI_AppStartProtection||2||CheckBoxCustom:SettingsAppStartProtectionDialog||---||false</item>
+		<item>SC_Common||SI_PreventScreenshots||3||CheckBox||---||false!!apiversion|19</item>
+		<item>SC_Common||SI_AllowUnicodePasswords||4||CheckBox||---||false</item>
+		<item>SC_Common||SI_AskIfReturnToMainPage||5||CheckBox||---||true</item>
+		<item>SC_Common||SI_AllowExternalAutofill||6||CheckBox||---||false!!apiversion|25</item>
+		<item>SC_Common||SI_RunClipboardCleanerOnExit||7||CheckBox||---||false</item>
+		<item>SC_Common||SI_SpecialCommands||8||CheckBox||---||false</item>
+		
+    </string-array>   
+    <string-array name="settings_comments" translatable="false">
+		<item>SC_PasswordVault||SI_LockScreenTime||SI_LockScreenTimeComment</item>
+		<item>SC_PasswordVault||SI_ShowMenu||SI_ShowMenuComment</item>
+		<item>SC_PasswordVault||SI_AutoBackup||SI_AutoBackupComment</item>
+		<item>SC_PasswordVault||SI_DisableAutoLinks||SI_DisableAutoLinksComment</item>
+		<item>SC_MessageEnc||SI_HideInfoMessage||SI_HideInfoMessageComment</item>
+		<item>SC_MessageEnc||SI_FinalEncoding||SI_FinalEncodingComment</item>
+		<item>SC_MessageEnc||SI_AddWhiteSpace||SI_AddWhiteSpaceComment</item>
+		<item>SC_MessageEnc||SI_LockScreenTimeTE||SI_LockScreenTimeCommentTE</item>
+		<item>SC_FileEnc||SI_ShowRoot||SI_ShowRootComment</item>
+		<item>SC_FileEnc||SI_MultiSelection||SI_MultiSelectionComment</item>
+		<item>SC_FileEnc||SI_WipeSourceFiles||SI_WipeSourceFilesComment</item>
+		<item>SC_FileEnc||SI_DeleteAfterDecryption||SI_DeleteAfterDecryptionComment</item>
+		<item>SC_FileEnc||SI_LockScreenTimeFE||SI_LockScreenTimeCommentFE</item>
+		<item>SC_FileEnc||SI_EncFileDestination||SI_EncFileDestinationComment</item>
+		<item>SC_FileEnc||SI_DecFileDestination||SI_DecFileDestinationComment</item>
+		<item>SC_FileEnc||SI_EncFileExistWarning||SI_EncFileExistWarningComment</item>
+		<item>SC_FileEnc||SI_ThumbnailSize||SI_ThumbnailSizeComment</item>
+		<item>SC_Common||SI_ImportExportPath||SI_ImportExportPathComment</item>
+		<item>SC_Common||SI_PreventScreenshots||SI_PreventScreenshotsComment</item>
+		<item>SC_Common||SI_AskIfReturnToMainPage||SI_AskIfReturnToMainPageComment</item>
+		<item>SC_Common||SI_ShowApplicationReport||SI_ShowApplicationReportComment</item>
+		<item>SC_Common||SI_AllowUnicodePasswords||SI_AllowUnicodePasswordsComment</item>
+		<item>SC_Common||SI_NativeCodeDisable||SI_NativeCodeDisableComment</item>
+		<item>SC_Common||SI_AppStartProtection||SI_AppStartProtectionComment</item>
+		<item>SC_Common||SI_RunClipboardCleanerOnExit||SI_RunClipboardCleanerOnExitComment</item>
+		<item>SC_Common||SI_AllowExternalAutofill||SI_AllowExternalAutofillComment</item>
+		<item>SC_Common||SI_SpecialCommands||SI_SpecialCommandsComment</item>
+    </string-array>	
+		
+	<!-- Misc. -->
+	<string name="extdir_list" translatable="false">/sdcard;/extsd;/storage;/mnt;</string>
+	<string name="importExportDir" translatable="false">SSE</string>
+	<string name="pwvAutoBackupFileName" translatable="false">PWV_AutoBackup</string>
+	<string name="textsSubdir" translatable="false">Texts</string>
+	<string name="filesSubdir" translatable="false">Files</string>
+	<string name="steganogramsSubDir" translatable="false">Steganograms</string>
+	<string name="fileExtensionVideo" translatable="false">|avi|mov|mpg|mpeg|mpe|svi|3gp|mp4|mkv|wmv|asf|swf|vob|divx|m1v|m2v|m4v|flv|</string>
+	<string name="fileExtensionAudio" translatable="false">|wav|mid|mp3|mp2|ogg|aac|flac|m4a|ape|wma|mpc|mp+|mpp|swa|</string>
+	<string name="fileExtensionImage" translatable="false">|jpg|jpeg|jif|jp2|jps|png|pns|psp|gif|tga|tif|tiff|xcf|pcx|bmp|svg|svgz|webp|heic|heif|</string>
+	<string name="fileExtensionText" translatable="false">|txt|xml|log|htm|html|</string>
+	<string name="fileExtensionMSWord" translatable="false">|doc|dot|docx|docm|dotx|dotm|docb|</string>
+	<string name="fileExtensionMSExcel" translatable="false">|xls|xlt|xlm|xlsx|xlsm|xltx|xltm|xlsb|</string>
+	<string name="fileExtensionMSPowerPoint" translatable="false">|ppt|pot|pps|pptx|pptm|potx|potm|ppsx|ppsm|sldx|sldm|</string>
+	<string name="fileExtensionArchive" translatable="false">|rar|zip|arj|tar|s7z|7z|zipx|ace|cab|gzip|bz2|arc|lzma|xz|zst|lz|gz|lz4|lzo|sz|</string>
+	<string name="fileExtensionPDF" translatable="false">|pdf|</string>
+	<string name="fileExtensionPWV" translatable="false">|pwv|</string>
+
+	<!-- What's new file -->
+	<string name="whatsNewFile" translatable="false">New_Version_31.html</string>
+	
+	<!-- Alert Directory -->
+	<string name="alerts_dir">file:///android_asset/~sse/en/alerts/</string>
+	
+	<!-- Help Links -->
+	<string name="helpLink_Main">file:///android_asset/~sse/en/help/index_internal.html</string>
+	<string name="helpLink_Main_Pro">file:///android_asset/~sse/en/help/index_internal_pro.html</string>
+	<string name="helpLink_PasswordVault">file:///android_asset/~sse/en/help/passwordvault_help.html</string>
+	<string name="helpLink_MessageEncryptor">file:///android_asset/~sse/en/help/messageenc_help.html</string>
+	<string name="helpLink_FileEncryptor">file:///android_asset/~sse/en/help/fileenc_help.html</string>
+	<string name="helpLink_OtherUtils">file:///android_asset/~sse/en/help/otherutils_help.html</string>
+	<string name="helpLink_Settings">file:///android_asset/~sse/en/help/settings_help.html</string>
+	
+</resources>

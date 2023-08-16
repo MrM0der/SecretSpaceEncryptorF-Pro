@@ -1,0 +1,5 @@
+- Password Vault: Added search function;
+- Password Vault: New item type "KEM Key Pair" — KEM management (storage, generation, encapsulation, extraction) for algorithms CRYSTALS-Kyber;
+- Password Vault: Updated data format — version 4;
+
+more: https://paranoiaworks.mobi/sse/ssechangelog.htm

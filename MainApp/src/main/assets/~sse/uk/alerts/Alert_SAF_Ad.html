@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uk">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+</head>
+<body>
+	<b>Режим SAF</b><br/>
+	<span style="font-size: 80%;">Цей каталог доступний лише для читання в режимі прямого доступу. Щоб отримати повний доступ до цієї папки, скористайтеся режимом <b>SAF</b>.</span><br/>
+	<br/>
+	<h2>Де?</h2>
+	<img src="../../img/saf_button.jpg" style="width:300px; max-width: 100%;"/><br/>
+	<span id="SAF01">
+		<br/>
+		<ul><li><img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_a.png"/> або <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_b.png"/></li></ul>
+	</span>
+	<br/>
+	<h2>Примітки й обмеження</h2>
+	<span style="font-size: 80%;">
+		<ul>
+			<li><span class="strokeYellow">Загалом зовнішні SD-картки зазвичай менш надійні</span> (особливо в деяких пристроях), ніж внутрішня пам’ять.</li>
+			<li>Домашня папка не може бути задана в SAF, при цьому останній обраний SAF URI автоматично зберігається: <b>Кнопка Додому → Перейти до останньої обраної папки SAF</b>.</li>
+			<li>Функція Зачищення не працює - Якщо опція "Зачищати після шифрування" увімкнена в налаштуваннях додатку, файл(и) буде тільки видалено.</li>
+			<li>Режим SAF забезпечує нижчу продуктивність у порівнянні зі стандартним режимом прямого файлового доступу (особливо з папками, що містять багато файлів/підпапок).</li>
+		</ul>
+	</span>
+	<script language="JavaScript">
+		try {
+			if(getValue("API_VERSION") > 29) {
+				document.getElementById("SAF01").style.display = 'none';
+			}			
+		}catch(err){} 
+	</script>
+
+</body>
+ 

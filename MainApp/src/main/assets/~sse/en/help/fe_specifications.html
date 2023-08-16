@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<title>S.S.E. File Encryptor - Format Specifications</title>
+    <script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+</head>
+<body>
+	<h1 id="anchor_main" class="textToCenter smallPad">
+		File Encryptor
+		<div class="smallerFont">(format specifications)</div>
+	</h1>
+	
+	<img src="../../img/fileenc_format_v3.svg" style="width:500px; max-width: 100%;" alt="File Encryption Format"/>
+	<br/><br/>
+	<b>*A - Compression: </b>Zip64 archive; DEFLATE or "store only"; CRC32 for each file within archive;<br/>
+	<b>*B - Encryption: </b>Chosen algorithm in CTR mode;<br/>
+	<b>*C - Random data block: </b>Random characters ("a-z" and "0-9" only); Quick password verification;<br/>
+	<b>*D - MAC: </b>Blake3 in authentication mode; 256 bits; Encrypt-then-Authenticate;<br/>
+	<b>*E - Version: </b>Format version = 4;<br/>
+	<b>*F - Algorithm Codes: </b><br/>
+	<div style="margin-left: 1.35em;">
+		• 0 = AES (256 bit)<br/> 
+		• 1 = RC6 (256 bit)<br/>
+		• 2 = Serpent (256 bit) : <small>(Bouncy Castle "Tnepres" implementation)</small><br/>
+		• 3 = Blowfish (256 bit)<br/> 
+		• 4 = Twofish (256 bit)<br/>
+		• 5 = GOST28147 (256 bit)<br/>
+		• 6 = Blowfish (448 bit)<br/>
+		• 7 = Threefish (1024 bit) : <small>(for PRO version)</small><br/> 
+		• 8 = SHACAL-2 (512 bit) : <small>(for PRO version)</small><br/> 
+		• 9 = Paranoia C4 (2048 bit) : <small>(for PRO version - cascade of Threefish–Serpent–AES–SHACAL2)</small>
+	</div>	
+	<b>*G - Custom KDF parameters: </b>related to Argon2id; lower 4 bits for <i><b>t</b></i> parameter multiplier; higher 4 bits for <i><b>m</b></i>; <i><b>t = t<span style="vertical-align: sup; font-size: 60%;">base</span> * 2^multiplier</b></i>;<br/>
+	<br/>
+	<h2>Key Derivation Function</h2>
+	• STEP 1: <code style="font-size: 140%;">HKDF(password)</code><br/>
+	(Skein-1024 based HKDF; Stored in device's RAM during session; 2048 bits;)<br/>
+	• STEP 2: <code style="font-size: 140%;">Argon2id(STEP 1, salt)</code><br/>
+	(New run (new salt) for every single encryption operation; 2048 bits;)<br/>
+	• STEP 3: <code style="font-size: 140%;">3 x HKDF(STEP 2)</code><br/>
+	(SHA3-512 based HKDF; For encryption key, authentication key (256 bits), and nonce;)<br/>
+	<hr/>
+	<b>Notes:</b><br/>
+	• For cascaded algorithms, a longer key and nonce is generated in step 3, which are then split to get unique key and nonce for each algorithm.<br/>
+	• Characters that are not from ASCII range 32-126 are converted to unicode code point numbers (for example: password "contraseña" equals "contrase241a").<br/>
+	<hr/>
+	<b>Argon2id Base Parameters:</b><br/>
+	t = 10<br/>
+	m = 10240 kB<br/>
+	h = 4<br/>
+	<br/>
+	<b>S.S.E. 1.8.0+ Argon2id Parameters Modifiers:</b><br/>
+	<i>t:<span style="vertical-align: sup; font-size: 60%;"></span> 0001b ⇒ t = 10 * 2^1 = <b>20</b></i><br/>
+	<i>m:<span style="vertical-align: sup; font-size: 60%;"></span> 0001b ⇒ m = 10240 * 2^1 = <b>20480 kB</b></i><br/>	
+	<br/>
+	<h2>Implementations</h2>
+	<ul>
+		<li><a href="https://paranoiaworks.mobi/sse/" target="_blank">Secret Space Encryptor for Android</a></li>
+		<li><a href="https://paranoiaworks.mobi/ssefepc/" target="_blank">S.S.E. File Encryptor for PC</a></li>
+	</ul>
+	
+	<br/>
+</body>
+</html>

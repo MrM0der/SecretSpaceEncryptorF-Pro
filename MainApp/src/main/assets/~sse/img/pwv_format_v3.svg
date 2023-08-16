@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<svg width="740" height="390" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>S.S.E. Password Vault - Format Specifications</title>
+  <line fill="none" id="svg_40" stroke="#969696" stroke-dasharray="5,3" stroke-miterlimit="10" x1="484.062467" x2="484.062467" y1="64.87641" y2="184.665037"/>
+  <line fill="none" id="svg_38" stroke="#969696" stroke-dasharray="5,3" stroke-miterlimit="10" x1="484.445115" x2="402.180005" y1="230.023112" y2="318.180001"/>
+  <line fill="none" id="svg_1" stroke="#969696" stroke-dasharray="5,3" stroke-miterlimit="10" x1="48.933341" x2="202.333334" y1="232.93333" y2="319.666667"/>
+  <rect fill="#FFFFFF" height="46" id="svg_34" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="72" x="119.827804" y="185"/>
+  <rect fill="#FFFFFF" height="46" id="svg_35" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="72" x="47.768136" y="185"/>
+  <line fill="none" id="svg_3" stroke="#969696" stroke-dasharray="5,3" stroke-miterlimit="10" x1="240.149902" x2="264.473708" y1="65.366862" y2="184.771932"/>
+  <rect fill="#FFFFFF" height="46" id="svg_5" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="219.777739" x="264.000001" y="185.071378"/>
+  <rect fill="#FFFFFF" height="46" id="svg_6" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="244.557591" x="239.333334" y="19"/>
+  <polyline id="svg_7" points="361.6121292114258,154.0469970703125 386.45413970947266,128.77200317382812 373.53614044189453,128.77200317382812 373.53614044189453,98.03299713134766 349.68811798095703,98.03299713134766 349.68811798095703,128.77200317382812 336.7701187133789,128.77200317382812 361.6121292114258,154.0469970703125 "/>
+  <text fill="black" font-family="Sans-serif" font-size="18" id="svg_8" transform="matrix(1, 0, 0, 1, 235.415, 86.8208)" x="57.122135" y="2">compression (A*)</text>
+  <text fill="black" font-family="Sans-serif" font-size="18" id="svg_9" transform="matrix(1, 0, 0, 1, 245.494, 170.899)" x="56.568127" y="2">encryption (B*)</text>
+  <text fill="black" font-family="Sans-serif" font-size="21" font-weight="bold" id="svg_10" transform="matrix(1, 0, 0, 1, 225.235, 214.888)" x="71.570532" y="0.383381">Encrypted Data</text>
+  <rect fill="#FFFFFF" height="46" id="svg_12" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="72" x="191.913454" y="185"/>
+  <text fill="black" font-family="Sans-serif" font-size="14" font-weight="bold" id="svg_13" style="cursor: move;" transform="matrix(1, 0, 0, 1.05653, 30, 211.594)" x="97.052315" y="-7.082836">KDF (*E)</text>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_14" style="cursor: move;" transform="matrix(1, 0, 0, 1, 133.568, 211.888)" x="63.770459" y="1.536999">Salt (*C)</text>
+  <text fill="black" font-family="Sans-serif" font-size="24" font-weight="bold" id="svg_15" transform="matrix(1, 0, 0, 1, 421.667, 214.888)" x="77.660714" y="1.325047">= (Database Format)</text>
+  <rect fill="#FFFFFF" height="46" id="svg_16" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="200" x="201" y="319"/>
+  <polyline id="svg_17" points="361.6116256713867,304.7130432128906 386.4536361694336,279.4380187988281 373.53661346435547,279.4380187988281 373.53661346435547,248.69898986816406 349.68761444091797,248.69898986816406 349.68761444091797,279.4380187988281 336.77062225341797,279.4380187988281 361.6116256713867,304.7130432128906 "/>
+  <text fill="black" font-family="Sans-serif" font-size="21" font-weight="bold" id="svg_18" transform="matrix(1, 0, 0, 1, 245.494, 348.555)" x="1.564331" y="0.645008">DB Format</text>
+  <rect fill="#FFFFFF" height="46" id="svg_19" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="72" x="129" y="319"/>
+  <rect fill="#FFFFFF" height="46" id="svg_20" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="105" x="24" y="319"/>
+  <rect fill="#FFFFFF" height="46" id="svg_24" stroke="#000000" stroke-miterlimit="10" stroke-width="2" width="83" x="401" y="319"/>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_25" transform="matrix(1, 0, 0, 1, 406.902, 346.221)" x="0.481327" y="1.203992">Hash (*F)</text>
+  <text fill="black" font-family="Sans-serif" font-size="24" font-weight="bold" id="svg_26" transform="matrix(1, 0, 0, 1, 501.667, 350.554)" x="-2.25" y="-0.412318">= (.pwv File Format)</text>
+  <text fill="black" font-family="Sans-serif" font-size="21" font-weight="bold" id="svg_27" transform="matrix(1, 0, 0, 1, 189, 48.8877)" x="59.720459" y="0.312302">Serialized Vault Object</text>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_28" transform="matrix(1, 0, 0, 1, 136.5, 348.555)" x="0.000001" y="-9.035156">Version</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" font-weight="bold" id="svg_30" transform="matrix(1, 0, 0, 1, 30, 211.888)" x="0.608334" y="125.268299">Header String</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" font-weight="bold" id="svg_31" transform="matrix(1, 0, 0, 1, 30, 211.888)" x="23.924999" y="145.23701">&quot;PWV&quot;</text>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_21" transform="matrix(1, 0, 0, 1, 136.5, 348.555)" x="18.266666" y="9.062195">1B</text>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_22" transform="matrix(1, 0, 0, 1, 136.5, 348.555)" x="9.094471" y="-125.030989">1B</text>
+  <text fill="black" font-family="Sans-serif" font-size="14" font-weight="bold" id="svg_36" style="cursor: move;" transform="matrix(1, 0, 0, 1.05653, 30, 211.594)" x="26.159223" y="-7.082836">Alg. (*D)</text>
+  <text fill="black" font-family="Sans-serif" font-size="16" font-weight="bold" id="svg_37" transform="matrix(1, 0, 0, 1, 136.5, 348.555)" x="-62.965197" y="-125.030989">1B</text>
+ </g>
+
+</svg>

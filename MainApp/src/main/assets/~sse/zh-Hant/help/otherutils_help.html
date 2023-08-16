@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<title>Android 版 Secret Space Encryptor  - 工具箱</title>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<script language="JavaScript" src="/android_asset/js/imageMapResizer.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+	<link rel="icon" type="image/png" href="/sse/img/sse_icon.png"/>
+</head>
+<body>
+	<h2 style="margin-top: -0.6em;">密碼生成器</h2>
+		<ul>
+			<li>可自訂的密碼生成器</li>
+			<li>密碼生成器也整合進了密碼保險箱應用程式</li>
+		</ul>
+	<br/>
+	<h2>清空剪貼簿</h2>
+		<ul>
+			<li>抹除系統剪貼簿上的內容</li>
+		</ul>
+	<br/>
+	<h2>應用程式報告</h2>
+		<ul>
+			<li>應用程式安全性報告</li>
+		</ul>
+	<br/>
+	<h2>演算法效能評測</h2>
+		<ul>
+			<li>密碼演算法效能測量</li>
+			<li>
+				<b>平台獨立版與本機程式碼版的比較： </b><br/>
+				<ul>
+					<li>Creative ZEN Touch 2 + Android 2.2</li>
+					<li>Java Dalvik 虛擬機與 C++ 本機程式碼編譯</li>
+				</ul>
+				<div class="delimiter">&nbsp;</div>
+				<table class="color centertd">
+					<tr class="grey">
+						<th class="textToLeft">演算法</th>
+						<th>平台獨立版<br/>（得分）</th>
+						<th>本機程式碼版<br/>（得分）</th>
+					</tr>
+					<tr>
+						<td>AES-256</td>
+						<td>1039</td>
+						<td>6507</td>
+					</tr>
+					<tr>
+						<td>RC6-256</td>
+						<td>972</td>
+						<td>9912</td>
+					</tr>
+					<tr>
+						<td>Serpent-256</td>
+						<td>729</td>
+						<td>6238</td>
+					</tr>
+					<tr>
+						<td>Blowfish-256</td>
+						<td>1082</td>
+						<td>9121</td>
+					</tr>
+					<tr>
+						<td>Twofish-256</td>
+						<td>1051</td>
+						<td>8225</td>
+					</tr>
+					<tr>
+						<td>GOST-256</td>
+						<td>856</td>
+						<td>6457</td>
+					</tr>
+					<tr>
+						<td>Blowfish-448</td>
+						<td>1065</td>
+						<td>9095</td>
+					</tr>
+				</table>
+				<div class="delimiter">&nbsp;</div>
+			</li>
+		</ul>	
+		<i>註：此項測試不包括檔案輸入輸出時間。</i> <br/><br/>
+	
+	<div id="toMainMenu" class="gradient"><a href="/android_asset/~sse/zh-Hant">&lt;&lt; 返回 SSE 主功能表</a></div>
+	<div id="reserveSpace"></div>
+	<script language="JavaScript">formatPage();</script>
+	
+</body>
+</html>

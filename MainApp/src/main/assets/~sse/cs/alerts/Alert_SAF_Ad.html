@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="cs">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+</head>
+<body>
+	<b>SAF mód</b><br/>
+	<span style="font-size: 80%;">Tento adresář neumožňuje zápis v režimu přímého přístupu. Zkuste prosím použít <b>SAF</b> mód.</span><br/>
+	<br/>
+	<h2>Kde?</h2>
+	<img src="../../img/saf_button.jpg" style="width:300px; max-width: 100%;"/><br/>
+	<span id="SAF01">
+		<br/>
+		<ul><li>tlačítko <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_a.png"/> nebo <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_b.png"/></li></ul>
+	</span>
+	<br/>
+	<h2>Poznámky a omezení</h2>
+	<span style="font-size: 80%;">
+		<ul>
+			<li><span class="strokeYellow">Externí SD karty jsou obvykle mnohem méně spolehlivé</span> (zvláště určité kombinace karet a telefonů) než interní paměť.</li>
+			<li>Nelze uložit domovský adresář, nicméně poslední vybrané SAF URI je automaticky uloženo viz: <b>Tlačítko domovského adresáře → Posledně vybraný SAF adr.</b>.</li>
+			<li>Funkci Wipe nelze použít - Pokud je v nastavení aplikace aktivní volba "Smazat zdroje po zašifrování" soubory budou pouze smazány (bez wipe).</li>
+			<li>SAF mód omezuje výkon aplikace (obzvláště při práci s adresáři, které obsahují velký počet položek).</li>
+		</ul>
+	</span>
+	<script language="JavaScript">
+		try {
+			if(getValue("API_VERSION") > 29) {
+				document.getElementById("SAF01").style.display = 'none';
+			}			
+		}catch(err){} 
+	</script>
+
+</body>
+ 

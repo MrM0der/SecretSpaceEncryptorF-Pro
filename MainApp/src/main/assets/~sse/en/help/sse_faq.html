@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<title>S.S.E. - Frequently Asked Questions</title>
+    <script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+	<link rel="icon" type="image/png" href="/sse/img/sse_icon.png"/>
+	<link rel="apple-touch-icon" href="/_common/img/sse_logo192.png" />
+</head>
+<body>
+	<h1 id="anchor_main">FAQ - Secret Space Encryptor</h1>		
+		<b class="strokeYellow" id="anchor_migracion">How can I migrate my data to a new device?</b>
+		<br/><br/>		
+		<b>Password Vault:</b><br/>	
+		- The password vault has an export/import function (you can choose between a compressed, fully-encrypted .pwv file format and an unencrypted, editable .xml format).<br/>
+		- For Android 5.0 and higher - standard (system provided) backup/restore features can also be used.<br/>
+		<br/>	
+		Manual Transfer:<br/>
+		<a href="javascript:swapContent('pvmtMoreExpander', 'pvmtMoreContent')" id="pvmtMoreExpander">Show more ...</a>
+		<span id="pvmtMoreContent" style="display: none;">
+		1. Export the vault to a pwv file (use the "more" button in the <a href="passwordvault_help.html">password vault application</a>) - It will appear in the application import/export directory <br/>
+		(default: <span id="A10M01"><b><code class="breakBlue">[Internal Storage]/SSE/</code></b> or </span><b><code class="breakBlue">[Internal Storage]/Android/media/com.paranoiaworks.unicus.android.sse/</code></b> - <span id="A10M03">can be </span>depended on system/application versions);<br/>
+		2. Copy the file to the import/export directory on your new device;<br/>	
+		3. Import the file: start <b><i>Password Vault</i></b> → cancel <b><i>password dialog</i></b> → tap <b><i>Help me get in!</i></b> → choose <b><i>Import Vault</i></b> → select the file you want to import from the list (names in the list correspond to file names in the import/export directory—if you cannot find your pwv file, it is not located in the correct directory);	
+		</span>
+		<br/><br/>
+		<b>Text + File Encryptor:</b><br/>
+		These applications work with files, so you can backup/transfer it as any other file. The text encryptor's default directory is <span id="A10M02"><b><code class="breakBlue">[Internal Storage]/SSE/Texts/</code></b> or </span><b><code class="breakBlue">[Internal Storage]/Android/media/com.paranoiaworks.unicus.android.sse/Texts/</code></b> and <b><code class="breakBlue">../Steganograms/</code></b>, The file encryptor saves a new archive into the same directory where the original (unencrypted) file is located (this is done by default). The destination can be changed in <b><i>Settings → File Encryptor: Encrypted Files Destination</i></b>).
+		<br/><br/>
+		<font color="red"><b>IMPORTANT NOTES:</b>
+		<div class="delimiterThin">&nbsp;</div>
+		<b>1) </b><i>You can check/change the current import/export directory in the application settings <b>(Settings → Common Settings: Import/Export Path)</b></i></br>
+		<div class="delimiterThin">&nbsp;</div>
+		<b>2) <code class="breakBlue">../Android/<table style="display: inline-table; vertical-align: text-bottom;"><tr><td style="font-size: 83%;">(data)</td></tr><tr><td>media</td></tr></table>/com.paranoiaworks.unicus.android.sse</code></b><i> directories will automatically be deleted (a system feature), when the application is uninstalled <b>(make a backup before, if required)</b></font></i>
+		
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_forgottenpassword">I forgot my password. Can you help me?</b>
+		<br/><br/>		
+		No, there is no backdoor. It's the purpose of the application. All data are encrypted (mathematically altered) using the password. Without the password you can't reverse the process and "reconstruct" original data. We can't help you. Nobody can. The correct password is the only way.
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_fingerprints">Why doesn't the application use fingerprints for file/text encryption and password vault access?</b>
+		<br/><br/>		
+		All data are fully encrypted (mathematically altered), and there must be an exact encryption key match to perform decryption. Without a 100% correct key you can't reverse the process and "reconstruct" original data. Fingerprints are usually used for authentication - originals are stored somewhere, and compared during an authentication process - but data are only hidden behind the process. There is no reliable way to use fingerprints for encryption (how to generate a decent encryption key from fingerprints) - only a few unreliable experiments have been carried out thus far. Moreover, <b>fingerprints are not secret and cannot be changed</b>. If someone has a copy of your fingerprints (which is quite easy to obtain for anyone who really wants to—since you literally write your password on everything you touch), all of your data (past, present, future) will be an "open book" for him/her/them. S.S.E. will <b>NEVER</b> use (directly or indirectly) biometric data for ENCRYPTION purposes.
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_otherapps">Why can't I use other application(s) that work with the same ciphers? For example AES to decrypt files/texts?</b>
+		<br/><br/>		
+		 It isn't only about an encryption algorithm, there are many other pieces: encryption mode (CBC, CFB, PCBC, OFB, CRT, CWC, EAX, ...), password processing (KDF - Key Derivation Function), integrity check, file archive type, compression etc... Detailed format specifications can be found <a href="javascript:gotoRootAndRoll('formats_specifications.html', 'anchor_main')">here</a>.
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_invalid_password">I can't decrypt my data, the application says "Invalid password or corrupted data", but I'm 100% sure my password is correct.</b>
+		<br/><br/>		
+		<b>A) Probability—more than 99.9%:</b> Your password really is invalid. Avoid mistypes when you try to set/enter your password and remember the correct password for the particular piece of data. Typing errors are quite easy to make on a software keyboard and if you already are in an "incorrect password" situation, please check for missing / swapped / doubled letters, replaced by neighbor / added extra neighbor letters - try all the combinations of keys in the vicinity of your intended key (one by one — it's laborious, but possible in case of single character error — many users have recovered their data using this procedure). Many "100% sure users" have also recalled the correct password eventually (if they tried of course — those who think they never make mistakes prefer to sacrifice their data to this believe).<br/><br/>
+		<b>B) Probability—low:</b> A hardware failure. The application verifies (decrypts) all data (Password Vault and Text Encryptor) and the wider header of .enc files after encryption to avoid calculation or memory errors. Most (unfortunately unpreventable) hardware errors are caused by storage failures. <font color="red"><b>SD cards are usually much less reliable (especially some combinations of devices/SD cards) than internal memory</b></font> (it can also fail but when you buy a decent device the probability is quite low). Android is an open platform and there are many unreliable devices on the market. If you value your data, stay away from them. Also, be sure to <b>always safely unmount SD cards</b> (and other external storages) before removing.
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_piracy">The application can be easily "cracked" (means "gain PRO version features") by various automatic "patchers". Where are the strong ciphers?</b>
+		<br/><br/>		
+		 The "strong ciphers" and all encryption capabilities of the application have absolutely nothing to do with anti-piracy protection of the PRO version. There isn't (and will not be) any special anti-piracy protection in this application, because it's complete nonsense. Applications of this type have to be trustworthy and their strongest attributes are: <b>open source</b>, not obfuscated build, fully off-line if possible, etc. All of these go against anti-piracy protections, but make the application much more reliable. Do not consider strengths as weaknesses. This isn't a "money making" project (it would end before it began) and if someone wants to rely on cracked security apps and has a rooted device full of "crackers and patchers", it's his fight and we are ok with that — there's no accounting for taste.
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_prolicense">PRO version license: Can I reuse my purchased SSE or do I need to buy it again?</b>
+		<br/><br/>		
+		 <b>A) Google Play Version:</b> The license is lifetime, and can be used for an unlimited number of devices - as the purchase is bound to your Google (Google Play) account. It will work on an unlimited number of devices (provided that you are logged in with the account that you used for the purchase). The application should be activated automatically on the first start; if not, go to <b>Other Utils → Upgrade to Pro Version</b> and tap the <b>Upgrade to Pro Version</b> button. A warning message should appear (something like "you already own this item") and the application will be activated. You can also activate an unlimited number of desktop versions (<a href="https://paranoiaworks.mobi/pc_pro_versions.html">more</a>) on all the devices you own.<br/><br/>
+		 <b>B) "F" Flavor Version (the original build of the version distributed outside of the Google Play store and activated with an activation key):</b> Similar to the Play Store version — you can use it on all the devices you own (Android + desktop).<br/><br/> In the event that you experience any problems with the activation process, don't hesitate to contact us.
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow">Clipboard Cleaner doesn't work — Why?</b>
+		<br/><br/>		
+		This issue is addressed <a href="otherutils_help.html#anchor_clipboardCleaner">here</a>.
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow">How to charge my phone? How to run applications? What should I do if my phone has fallen into the toilet? etc.</b>
+		<br/><br/>		
+		 Please use DuckDuckGo, Google (or another search engine) for this type of questions. We are neither a service or training center for Android and for applications from other developers, nor a manufacturer of your phone.
+		<br/><br/>
+	
+	<h2 id="anchor_fe">File Encryptor Specific</h2>
+		<b class="strokeYellow" id="anchor_fe_visiblefiles">My file(s) are still visible after an encryption. The application doesn't work or what I am doing wrong?</b>
+		<br/><br/>
+		SSE File Encryptor works as an archiver (a new .enc file is created). You can delete/wipe the original file(s) after the encryption process is completed or it can be done automatically: <i><b>Settings: File Encryptor → Wipe Source After Encryption</b></i>
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_thumbnails">My images/videos (or other documents) have been encrypted/deleted, but I can still see thumbnails in my picture viewer/gallery application. What should I do about it?</b>
+		<br/><br/>		
+		 There are a number of gallery / picture viewer applications available, so this issue does not have a universal solution. When a picture file is deleted your gallery software still has its own "shrunk" copy of it (thumbnail) and updating this status is up to the gallery software. Thumbnails can be stored (cached) within the gallery software data space (so no other application has permission to access the data). A <b>similar problem can occur with other documents</b> if the target application holds, for example, AutoSave copies of your documents. 
+		<br/><br/>
+		
+		<span id="externalSD">
+			<hr/><br/>		
+			<b class="strokeYellow" id="anchor_fe_kitkat">Android 4.4 and higher: External SD card (or USB drive) is read only (or is not visible). Message: EACCESS (Permission denied).</b>
+			<br/><br/>
+			Android 4.4+ does not allow direct write access to the external SD card to any app except for preinstalled apps (preinstalled by device, or system image manufacturer). The only solution on Android 4.4 is to root your device and change permissions, <b>on Android 5+ use</b> <a href="fileenc_help.html#anchor_saf">SAF</a>.
+			<br/><br/>
+			<img src="../../img/saf_button.jpg" style="width:300px; max-width: 100%;"/>
+			<br/>
+			<span id="SAF01">
+				<br/>
+				<ul><li>button <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_a.png"/> or <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_b.png"/></li></ul>
+			</span>
+			<br/>
+			Use Google for more info - search for something like: <code><b><font color="blue">android 4.4 external card read only</font></b></code>		
+			<br/><br/>
+			<b>☯ Alternatively ☯</b><br/>
+			Use (create in case it doesn't exist) the following directory (on your external SD card):<br/>
+			<code><b><font color="blue">Android/data/</font><br/><font color="red">com.paranoiaworks.unicus.android.sse</font></b></code><br/>
+			or
+			<br/>
+			<code><b><font color="blue">Android/media/</font><br/><font color="red">com.paranoiaworks.unicus.android.sse</font></b></code><br/><br/>
+			These folders belong to the application and the application should have write permissions in these folders.</br>
+			<i>Note: If you uninstall the application, the content of these folders will be automatically deleted (make a backup before that if needed).</i>
+			<br/><br/>
+		</span>
+		
+	<h2 id="anchor_te">Text Encryptor Specific</h2>
+		<b class="strokeYellow" id="anchor_te_algdet">The text is decrypted even when I change the algorithm in the application settings. How is that possible?</b>
+		<br/><br/>
+		You can set an <b>ENCRYPTION</b> algorithm (the decryption algorithm is detected automatically - information about the used algorithm is part of the application data format).
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_te_salt">The application produces a completely different output (using the same input) whenever I tap the encrypt button. How is that possible?</b>
+		<br/><br/>
+		Two words for DuckDuckGo, Google (or some other search engine):<br/> <code class="font120"><b><font color="blue">cryptographic salt</font></b></code>
+		<br/><br/>
+		
+	<div id="toMainMenu" class="gradient">
+		<span class="floatLeft"><a href="/sse/">&lt;&lt; SSE Main Menu</a></span>
+		<div class="textToRight" style="margin-top: 0.0em; margin-bottom: -0.7em;" id='signHere'></div>		
+	</div>
+	<script language="JavaScript">
+		setSignElement('signHere', 'paranoiaworks', 'protonmail.com');
+		formatPage();
+		window.onload = function () {
+			if (location.hash != null && location.hash != "") {
+				scrollToElement(location.hash.substr(1), -10);
+			}
+		};
+		try {
+			if(getValue("API_VERSION") > 29) {
+				document.getElementById("SAF01").style.display = 'none';
+				document.getElementById("A10M01").style.display = 'none';
+				document.getElementById("A10M02").style.display = 'none';
+				document.getElementById("externalSD").style.display = 'none';
+			}
+			else {
+				document.getElementById("A10M03").style.display = 'none';
+			}
+		}catch(err){
+			document.getElementById("A10M03").style.display = 'none';
+		} 
+	</script>
+</body>
+</html>

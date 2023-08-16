@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<title>常见问题（FAQ） - 秘密空间加密器</title>
+    <script language="JavaScript" src="/android_asset/js/help.js"></script>
+	<link rel="stylesheet" type="text/css" href="/android_asset/css/help.css"/>
+	<link rel="icon" type="image/png" href="/sse/img/sse_icon.png"/>
+	<link rel="apple-touch-icon" href="/_common/img/sse_logo192.png" />
+</head>
+<body>
+	<h1 id="anchor_main">常见问题(FAQ) - 秘密空间加密器</h1>		
+		<b class="strokeYellow" id="anchor_migracion">我如何将数据迁移到新设备？</b>
+		<br/><br/>		
+		<b>密码保险箱：</b><br/>	
+		- 密码保险箱具有导出/导入功能（您可以选择经过压缩且完全加密的 .pwv 文件格式和未压缩可编辑的 .xml 格式）。<br/>
+		- 对于 Android 5.0 及更高版本 - 还可以使用（系统提供的）标准备份/还原功能。<br/>
+		<br/>	
+		手动传送：<br/>
+		1.将保险箱导出为 pwv 文件（使用 <a href="passwordvault_help.html">密码保险箱应用</a>中的“更多”按钮） - 它将在应用的导入/导出目录</br>
+		（默认为：<span id="A10M01"><b><code class="breakBlue">[内部存储空间]/SSE/</code></b>或</span><b><code class="breakBlue">[内部存储空间]/Android/media/com.paranoiaworks.unicus.android.sse/</code></b>）中显示<br/>
+		2.将该文件复制到新设备上的导入/导出目录<br/>	
+		3.导入该文件（启动<b><i>密码保险箱</i></b> → 取消<b><i>密码对话框</i></b> → 点击<b><i>帮我登录！</i></b> → 选择<b><i>导入保险箱</i></b> → 选择要导入的文件）<br/>	
+		<i>注意：您可以在应用的设置中检查/更改当前的导入/导出目录 - <b>（设置 → 通用设置: 导入/导出路径）</i></b><br/>
+		<br/>
+		<b>文本 + 文件加密：</b><br/>
+		这些应用处理文件，因此，您可以将它作为任何其它文件进行备份/传送。文本加密 (text encryptor) 的默认目录为 <span id="A10M02"><b><code class="breakBlue">[内部存储空间]/SSE/Texts/</code></b>或</span><b><code class="breakBlue">[内部存储空间]/Android/media/com.paranoiaworks.unicus.android.sse/Texts/</code></b> 及 <b><code class="breakBlue">../Steganograms/</code></b>，文件加密 (file encryptor) 会在原始（未加密）文件所在的同一目录中保存一个新档案（这是默认设置）。可以在<b><i>设置 → 文件加密: 加密文件目标路径中更改目标路径</i></b>。
+		<br/><br/><font color="red" style="font-size: 95%;">注意：卸载应用程序时，目录<b><code class="breakBlue">../Android/<table style="display: inline-table; vertical-align: text-bottom;"><tr><td style="font-size: 76%;">(data)</td></tr><tr><td>media</td></tr></table>/com.paranoiaworks.unicus.android.sse</code></b>将自动删除（系统功能）（如果需要，请先备份）。</font>
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_prolicense">PRO 版本许可证：我可以重复使用已购买的 SSE，还是需要重新购买？</b>
+		<br/><br/>		
+		 此许可证终生有效，并且使用许可证的设备数量不受限制 — 购买的许可证与您的 Google (Google Play) 账户绑定在一起。使用许可证的设备数量将不受限制（只要您用购买许可证时使用的账户登录即可）。在初次启动时，应用应该会自动激活；如果无法激活，请前往<b>工具箱 → 升级到 Pro 版</b>并点击<b>升级到 Pro 版</b>版按钮。此时会显示一条警告消息（类似于“您已拥有此项目”），然后，应用将会被激活。此外，您还可以激活任意数量的桌面版本（<a href="https://paranoiaworks.mobi/pc_pro_versions.html">更多信息</a>）。如果您在此过程中遇到任何问题，请随时与我们联系。
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_forgottenpassword">我忘记了密码。您可以帮助我吗？</b>
+		<br/><br/>			不，此应用没有后门。这正是我们开发此应用的目的。所有数据都使用密码进行了加密（从数学角度做出了改变）。如果没有密码，您将无法撤销此过程并“重建”原始数据。我们无法帮助您。没有人可以做到。获取正确密码是唯一的途径
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_fingerprints">此应用为什么不使用指纹来加密文件/文本以及访问密码保险箱？</b>
+		<br/><br/>	所有数据都经过完全加密（从数学角度做出了改变），并且加密密钥必须完全匹配才能进行解密。如果没有100%正确的密钥，您将无法撤销此过程并“重建”原始数据。指纹通常用于身份验证 - 原始指纹存储在某个地方，并在身份验证过程中进行比较 - 但数据隐藏在这个过程之后。没有任何可靠的方法可以将指纹用于加密（如何通过指纹生成强大的加密密钥）- 到目前为止，在这方面只进行了少数几次不太可靠的实验。而且，<b>指纹并不属于秘密，而且无法更改</b>。如果某人拥有您指纹的副本（如果真正想要获取的话，任何人都可以相当轻松地获取 - 由于您几乎将密码写在您可以碰到的任何位置），那么，对他/她/他们来说，您的所有数据（过去、现在、将来）将唾手可得。S.S.E. 绝不会将生物特征数据用于加密。
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_otherapps">为什么我不能使用其它采用相同加密算法的应用？例如，使用 AES 来解密文件/文本？</b>
+		<br/><br/>		
+		这不仅与加密算法有关，还涉及到其它许多因素：加密模式（CBC、CFB、PCBC、OFB、CRT、CWC、EAX...），密码处理（KDF - 密码推导函数），完整性检查，文件归档类型，压缩等。请单击<a href="javascript:gotoRootAndRoll('formats_specifications.html', 'anchor_main')">此处</a>了解详细的格式规范。
+		<br/><br/>
+	
+	<h2 id="anchor_fe">文件加密相关</h2>
+		<b class="strokeYellow" id="anchor_fe_visiblefiles">我的文件在加密后仍然可见。是应用出现问题，还是我操作出错？</b>
+		<br/><br/>
+		SSE 文件加密作为归档程序运行（将创建一个新的 .enc 文件）。您可以在加密过程完成后删除/擦除原始文件，也可以让系统自动执行此操作：<i><b>设置: 文件加密 → 加密后擦除源文件</b></i>
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_thumbnails">我的图片（或视频）已加密/删除，但我仍然可以在图片查看器/图库应用中看到缩略图。我该怎么办？</b>
+		<br/><br/> 市面上存在许多图库/图片查看器应用，因此，这个问题并没有通用的解决办法。删除图片文件后，您的图库软件自身仍存有该文件的“缩略”副本（缩略图），是否更新此状态将取决于图库软件。缩略图可能存储（缓存）在图库软件的数据空间内（因此，没有其它应用有权访问该数据）。 
+		<br/><br/>
+		
+		<span id="externalSD">
+			<hr/><br/>		
+			<b class="strokeYellow" id="anchor_fe_kitkat">Android 4.4 及更高版本：外置 SD 卡（或 U 盘）处于只读状态（或不可见）。消息：EACCESS（没有权限）。</b>
+			<br/><br/>
+			Android 4.4 不允许除预安装应用（由设备或系统映像制造商预安装）以外的任何应用以写入方式访问外置 SD 卡。对于此问题，我们完全无力解决。唯一的解决办法是对您的设备执行 root 操作并更改权限，或者<b>升级到 Android 5+ 并使用</b> <a href="fileenc_help.html#anchor_saf">SAF</a>.
+			<br/><br/>
+			<img src="../../img/saf_button.jpg" style="width:300px; max-width: 100%;"/>
+			<br/>
+			<span id="SAF01">
+				<br/>
+				<ul><li><img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_a.png"/> 要么 <img style="vertical-align: middle;" width="37px" height="20px" src="../../img/safbutton_b.png"/></li></ul>
+			</span>
+			<br/>
+			请使用百度搜索更多信息 - 例如，搜索：<code><b><font color="blue">android 4.4 外置卡只读</font></b></code>		
+			<br/><br/>
+			<b>• 或者</b><br/>
+			在外置 SD 卡上使用以下目录（如果不存在，则创建此目录）：<br/>
+			<code><b><font color="blue">Android/data/</font><br/><font color="red">com.paranoiaworks.unicus.android.sse</font></b></code><br/>
+			或
+			<br/>
+			<code><b><font color="blue">Android/media/</font><br/><font color="red">com.paranoiaworks.unicus.android.sse</font></b></code><br/><br/>
+			这些文件夹属于应用所有，在这些文件夹中，应用应该具有写入权限。</br>
+			<i>注意：如果您卸载了应用，将会自动删除这些文件夹中的内容（如果需要，请在卸载之前进行备份）。</i>
+			<br/><br/>
+		</span>
+		
+	<h2 id="anchor_te">文本加密相关</h2>
+		<b class="strokeYellow" id="anchor_te_algdet">即使我在应用设置中更改了算法，文本仍被解密。怎么可能会出现这种情况？</b>
+		<br/><br/>
+		您可以设置<b>加密</b>算法（将会自动检测解密算法 - 有关所使用算法的信息是应用数据格式的一部分）。 
+		<br/><br/><hr/><br/>
+		
+		<b class="strokeYellow" id="anchor_te_salt">无论我什么时候点击“加密”按钮，应用都生成完全不同的输出结果。怎么可能会出现这种情况？</b>
+		<br/><br/>
+		请在百度上搜索：<code><b><font color="blue">密码加盐 (cryptographic salt)</font></b></code>
+		<br/><br/>
+		
+	<div id="toMainMenu" class="gradient">
+		<span class="floatLeft"><a href="/sse/zh-Hans">&lt;&lt; 返回 SSE 主菜单</a></span>
+		<div class="textToRight" style="margin-top: 0.0em; margin-bottom: -0.7em;" id='signHere'></div>		
+	</div>
+	<script language="JavaScript">
+		setSignElement('signHere', 'paranoiaworks.mobile', 'gmail.com');
+		formatPage();
+		window.onload = function () {
+			if (location.hash != null && location.hash != "") {
+				scrollToElement(location.hash.substr(1), -10);
+			}
+		};
+		try {
+			if(getValue("API_VERSION") > 29) {
+				document.getElementById("SAF01").style.display = 'none';
+				document.getElementById("A10M01").style.display = 'none';
+				document.getElementById("A10M02").style.display = 'none';
+			}
+		}catch(err){} 
+	</script>
+</body>
+</html>

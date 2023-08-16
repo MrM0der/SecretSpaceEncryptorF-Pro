@@ -1,0 +1,5 @@
+- File Encryptor: Performance optimization of BLAKE3 authentication algorithm;
+- Updated application target API (level 31);
+- A new option in settings (Password Vault → Disable Auto Links);
+
+more: https://paranoiaworks.mobi/sse/ssechangelog.htm
