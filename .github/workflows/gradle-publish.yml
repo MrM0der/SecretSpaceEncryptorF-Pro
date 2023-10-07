@@ -33,6 +33,7 @@ jobs:
       - name: Build APK
         working-directory: ./workspace
         run: |
+          sudo snap install flutter --classic
           flutter clean
           flutter pub get
           if [ ! -f "gradlew" ]; then gradle wrapper; fi
